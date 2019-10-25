@@ -1,0 +1,26 @@
+\documentclass{jarticle}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document}
+大問1. 正の整数nに対し
+\begin{equation*}
+ I_n = \int^{\frac{\pi}{3}}_{0} \frac{d\theta}{\cos^n\theta}
+\end{equation*}
+とする. \par
+(1) $I_1$ を求めよ. 必要ならば $\frac{1}{\cos\theta} = \frac{1}{2}\left(\frac{\cos\theta}{1+\sin\theta}+\frac{\cos\theta}{1-\sin\theta}\right)$ を使ってよい.  \par
+解答. 
+\begin{align*}
+ I_1 &= \int^{\frac{\pi}{3}}_{0} \frac{d\theta}{\cos\theta} \\
+     &= \int^{\frac{\pi}{3}}_{0}  \frac{1}{2}\left(\frac{\cos\theta}{1+\sin\theta}+\frac{\cos\theta}{1-\sin\theta}\right) \, d\theta \\
+     &= \int^{\frac{\pi}{3}}_{0} \frac{1}{2}\left(\frac{(\sin\theta)'}{1+\sin\theta}-\frac{(-\sin\theta)'}{1-\sin\theta}\right) \, d\theta \\
+     &= \frac{1}{2} \left[\log(1+\sin\theta) - \log(1-\sin\theta)\right]^{\frac{\pi}{3}}_{0} \\
+     &= \frac{1}{2} \left\{ \log\left(1+\frac{\sqrt{3}}{2}\right) - \log\left(1-\frac{\sqrt{3}}{2}\right)\right\} \\
+     &= \frac{1}{2} \log\left(\frac{1+\frac{\sqrt{3}}{2}}{1-\frac{\sqrt{3}}{2}}\right) \\
+     &= \frac{1}{2} \log(\frac{2+\sqrt{3}}{2-\sqrt{3}}) \\
+     &= \frac{1}{2} \log(2+\sqrt{3})^2 \\
+     &= \log(2+\sqrt{3}) \\
+\end{align*}
+\end{document}
